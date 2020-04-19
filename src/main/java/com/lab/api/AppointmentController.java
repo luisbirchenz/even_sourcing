@@ -10,7 +10,7 @@ import com.lab.service.command.AppointmentCommandService;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping(value = "/appointments")
+@RequestMapping(value = "/appointment")
 @Api(value = "Appointment Commands", tags = "Appointment Commands Endpoints")
 public class AppointmentController {
 	

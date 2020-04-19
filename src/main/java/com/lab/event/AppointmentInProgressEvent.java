@@ -1,5 +1,11 @@
 package com.lab.event;
 
-public class AppointmentInProgressEvent {
+import com.lab.aggregates.AppStatus;
+
+public class AppointmentInProgressEvent extends BaseEvent<String> {
+
+	public AppointmentInProgressEvent(String id) {
+		super(id, AppStatus.IN_PROGRESS);
+	}
 
 }

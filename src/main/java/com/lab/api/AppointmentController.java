@@ -24,5 +24,26 @@ public class AppointmentController {
 	public CompletableFuture<String> createAppointment(AppointmentDTO appointmentDTO) {
 		return appointmentCommandService.createAppointment(appointmentDTO);
 	}
+	
+
+	@PutMapping(value = "/start/{appointmentId}")
+	public CompletableFuture<String> startAppointment(String appointmentId){
+		return appointmentCommandService.startAppointment(appointmentId);
+	}
+	
+	@PutMapping(value = "/book/{appointmentId}")
+	public CompletableFuture<String> bookAppointment(String appointmentId){
+		return appointmentCommandService.bookAppointment(appointmentId);
+	}
+
+	@PutMapping(value = "/cancel/{appointmentId}")
+	public CompletableFuture<String> cancelAppointment(String appointmentId){
+		return appointmentCommandService.cancelAppointment(appointmentId);
+	}
+	
+	@PutMapping(value = "/complete/{appointmentId}")
+	public CompletableFuture<String> completeAppointment(String appointmentId){
+		return appointmentCommandService.completeAppointment(appointmentId);
+	}
 
 }

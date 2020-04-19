@@ -1,5 +1,7 @@
 package com.lab.service.query;
 
-public interface AppointmentQueryService {
+import java.util.List;
 
+public interface AppointmentQueryService {
+	public List<Object> listOfEventsForAppointment(String appointmentId);
 }
